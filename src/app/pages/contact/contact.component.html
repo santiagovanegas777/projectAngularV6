@@ -1,0 +1,58 @@
+<div class="divContacto">
+  <form>
+    <div class="divInput">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email de contacto"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="divInput">
+      <input
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        [(ngModel)]="phoneNumber"
+        name="phone"
+        placeholder="Teléfono"
+        class="form-control"
+      />
+    </div>
+    <div class="divInput">
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        type="textarea"
+        [(ngModel)]="message"
+        name="email"
+        placeholder="Escriba aquí su mensaje"
+        class="form-control textarea"
+        required
+      ></textarea>
+    </div>
+    <div class="acceptPolicy">
+      <input type="checkbox"
+      name="accept" value="ok"
+      (click)="submitButtonActivator()"
+      class="form-check-input"
+      />
+    Acepto la política de datos<br />
+
+      <button type="submit" (click)="sendMessage()"class="divButton"[disabled]="submitEnable" >ENVIAR</button >
+    </div>
+  </form>
+<div *ngIf ="messageSent" class="mensajeEnviado">
+  <p>Su mensaje ha sido enviado.</p>
+</div>
+
+  <div class="contact">
+  <h2>BUY NOW!</h2>
+  <a href="#">Preguntas Frecuentes</a>
+  <p>Email de contacto: improveyourself@gmail.com</p>
+  <p>Teléfono de contacto: +88 888 888 888</p>
+</div>
+</div>

@@ -1,0 +1,18 @@
+
+
+
+        <ng-template #logeado>
+
+  <div class="contenedor">
+
+    <img [src]="shoeItem.image" [alt]="shoeItem.tipo" class="card-image" />
+
+    <div class="contenedorTexto">
+    <h4 class="title text-center">{{ shoeItem.tipo }}</h4>
+    <p>{{shoeItem.color}}</p>
+    <p>Temporada: {{shoeItem.temporada}}</p>
+    <p>Stock: {{shoeItem.stock}}</p>
+    <p>Referencia{{shoeItem._id}}</p>
+  </div>
+  </div>
+   </ng-template>

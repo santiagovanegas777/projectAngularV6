@@ -1,0 +1,12 @@
+<div  *ngIf="productsList.length">
+  <h3>PRODUCTS LIST</h3>
+  <div class="productsList-container" *ngFor="let product of productsList">
+    <h4>Referencia: {{ product._id }} - {{ product.tipo }}</h4>
+    <p> Stock: {{ product.stock }}</p>
+     <img [src]="product.image" [alt]="product.tipo" >
+     <h5>{{product.temporada}} - {{product.color}}</h5>
+     <a [routerLink]="['/products', product._id]" >Detail</a>
+
+
+  </div>
+</div>

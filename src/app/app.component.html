@@ -1,0 +1,16 @@
+
+<div class="container">
+
+<app-navbar></app-navbar>
+<nav>
+  <a *ngIf="!loginService.token" [routerLink]="['/login']">Login</a>
+
+
+</nav>
+
+<button *ngIf="loginService.token" (click)="logout()">logout</button>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>
+</div>
